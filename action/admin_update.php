@@ -19,9 +19,9 @@ if ($count == 0) {
     $_SESSION['validate'] = "not-match";
     echo "<script>window.location.href='.?folder=pages/&page=admin_reset&error=2';</script>";
 } else {
-    // ID NUMBER EXISTS, HASH THE PASSWORD AND UPDATE THE REGISTERED_USERS TABLE
+    // ID NUMBER EXISTS, HASH THE PASSWORD AND UPDATE THE REGISTERED_ADMIN TABLE
     $hash = password_hash($password, PASSWORD_ARGON2I);
-    $query = "UPDATE registered_users SET password='$hash' WHERE IDnumber = '$idnumber' AND login_type = 'ADMIN'";
+    $query = "UPDATE registered_admin SET password='$hash' WHERE IDnumber = '$idnumber' AND login_type = 'ADMIN'";
     if (mysqli_query($conn, $query)) {
         $_SESSION['validate'] = "successful";
         echo "<script>window.location.href='.?folder=pages/&page=form&success=1';</script>"; 
