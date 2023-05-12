@@ -20,7 +20,7 @@ $password = $_POST['password'];
 // UPDATING DATA FROM THE TABLE INCHARGE
   // Verify the input password with the hashed password from the database
   if (password_verify($password, $hashed_password)) {
-$update_query = "UPDATE registered_admin SET IDnumber='$idnumber', Firstname='$firstname', Lastname='$lastname', email='$mail'; ";
+$update_query = "UPDATE registered_admin SET IDnumber='$idnumber', Firstname='$firstname', Lastname='$lastname', email='$mail'";
 
 $update_result = mysqli_query($conn, $update_query);
 if ($update_result) {
