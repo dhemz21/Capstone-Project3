@@ -15,8 +15,8 @@ include_once('action/display-profile.php');
       </div>
       <div class="card-body">
         <?php
-        $userID = $_SESSION['UserID'];
-        $sql = mysqli_query($conn, "SELECT * FROM registered_admin WHERE UserID = '$userID'");
+        $userid = $_SESSION['userid'];
+        $sql = mysqli_query($conn, "SELECT * FROM registered_admin WHERE userid = '$userid'");
         while ($getData = mysqli_fetch_array($sql)) {
 
         ?>
@@ -26,11 +26,11 @@ include_once('action/display-profile.php');
               <img src="profile/<?php echo $image; ?>" alt="Profile Picture">
             </div>
             <div class="btn-add">
-              <a href=".?page=edit-admin&UserID=<?php echo $getData['UserID']; ?>" class="btn text-white" id="edit">Edit Profile</a>
+              <a href=".?page=edit-admin&userid=<?php echo $getData['userid']; ?>" class="btn text-white" id="edit">Edit Profile</a>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
+                <input type="hidden" name="userid" value="<?php echo $getData['userid']; ?>">
                 <label for="user">ID number</label>
                 <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
               </div>

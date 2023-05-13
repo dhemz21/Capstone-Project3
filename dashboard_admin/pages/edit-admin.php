@@ -37,8 +37,8 @@ include_once('action/display-profile.php');
                     <?php
 
                     require_once("../database/db_conn.php");
-                    $userID = $_SESSION['UserID'];
-                    $query = mysqli_query($conn, "SELECT * FROM registered_admin WHERE UserID = '$userID'");
+                    $userid = $_SESSION['userid'];
+                    $query = mysqli_query($conn, "SELECT * FROM registered_admin WHERE userid = '$userid'");
                     while ($getData = mysqli_fetch_array($query)) {
                     ?>
 
@@ -50,7 +50,7 @@ include_once('action/display-profile.php');
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
+                                <input type="hidden" name="userid" value="<?php echo $getData['userid']; ?>">
                                 <label for="user">ID number</label>
                                 <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
                             </div>

@@ -44,8 +44,16 @@ include_once('action/display-profile.php');
                 <form action=".?folder=action/&page=save-incharge" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="user">ID number</label>
+                            <label for="IDnumber">ID number</label>
                             <input type="text" class="form-control" name="IDnumber" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" name="firstname" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" name="lastname" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>

@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_GET['page']) && $_GET['page'] == 'logout'){
     // unset the session variable
-    unset($_SESSION['UserID']);
+    unset($_SESSION['userid']);
     // destroy the session data
     session_destroy();
     // clear any cached output

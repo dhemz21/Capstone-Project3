@@ -2,7 +2,7 @@
 // DATABASE CONNECTION 
 require_once('../database/db_conn.php');
 
-$userID = $_SESSION['UserID'];
+$userid = $_SESSION['userid'];
 
 // IMAGE UPLOAD
 $image_name = $_FILES['profile_picture']['name'];
@@ -54,7 +54,7 @@ if (!$image_name) {
 
 // Query
 // UPDATING THE IMAGE IN THE registered_incharge TABLE
-$sql = mysqli_query($conn,"UPDATE registered_admin SET profile_picture='$image' WHERE UserID = '$userID'");
+$sql = mysqli_query($conn,"UPDATE registered_admin SET profile_picture='$image' WHERE userid = '$userid'");
 
 $_SESSION['validate'] = "update";
 echo "<script>window.location.href='.?folder=pages/&page=admin-add-photo&success=1';</script>";

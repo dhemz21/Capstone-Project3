@@ -46,6 +46,14 @@ include_once('action/display-profile.php');
                             <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" name="firstname" value="<?php echo $getData['firstname']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" name="lastname" value="<?php echo $getData['lastname']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" value="<?php echo $getData['email']; ?>" required>
                         </div>

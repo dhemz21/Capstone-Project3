@@ -2,7 +2,7 @@
 // DATABASE CONNECTION
 require_once('../database/db_conn.php');
 // Posted Data
-$userID = $_POST['UserID'];
+$userid = $_POST['userid'];
 $idnumber = $_POST['IDnumber'];
 $firstname = $_POST['Firstname'];
 $lastname = $_POST['Lastname'];
@@ -11,7 +11,7 @@ $password = $_POST['password'];
 
 
   // Retrieve the hashed password from the database for the user
-  $query = "SELECT password FROM registered_admin WHERE UserID = '$userID'";
+  $query = "SELECT password FROM registered_admin WHERE userid = '$userid'";
   $result = mysqli_query($conn, $query);
   $row = mysqli_fetch_assoc($result);
   $hashed_password = $row['password'];
@@ -26,20 +26,20 @@ $update_result = mysqli_query($conn, $update_query);
 if ($update_result) {
  
   // UPDATE SESSION VARIABLES
-  $_SESSION['UserID'] = $userID;
+  $_SESSION['Userid'] = $userid;
   $_SESSION['validate'] = "update";
-  echo "<script>window.location.href='.?folder=pages/&page=admin-info&success=1&UserID=$userID';</script>";
+  echo "<script>window.location.href='.?folder=pages/&page=admin-info&success=1&userid=$userid';</script>";
 } else{
 
   $_SESSION['validate'] = "error";
-  echo "<script>window.location.href='.?folder=pages/&page=edit-admin&error=1&UserID=$userID';</script>";
+  echo "<script>window.location.href='.?folder=pages/&page=edit-admin&error=1&userid=$userid';</script>";
 
 }
 
   }else {
 
     $_SESSION['validate'] = "not-match";
-    echo "<script>window.location.href='.?folder=pages/&page=edit-admin&error=1&UserID=$userID';</script>";
+    echo "<script>window.location.href='.?folder=pages/&page=edit-admin&error=1&userid=$userid';</script>";
 
   }
 

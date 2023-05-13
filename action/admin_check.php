@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
                    // REGENERATE THE SESSION ID
                    session_regenerate_id();
                     // ASSIGN THE VALUES OF EACH COLUMN IN THE RETURNED ROW TO DIFFERENT SESSION VARIABLES
-                    $userID = $_SESSION['UserID'] = $getData['UserID'];
+                    $userid = $_SESSION['userid'] = $getData['userid'];
                     $fname = $_SESSION['Firstname'] = $getData['Firstname'];
                     $lname = $_SESSION['Lastname'] = $getData['Lastname'];
                     $type = $_SESSION['login_type'] = $getData['login_type'];
