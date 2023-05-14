@@ -2,6 +2,9 @@
 // DATABASE CONNECTION
 require_once('../database/db_conn.php');
 
+if (isset($_COOKIE['confirm_duplicate'])) {
+  unset($_COOKIE['confirm_duplicate']);
+}
 // add unique index to tbl_student table
 $sql = "ALTER TABLE tbl_student ADD UNIQUE INDEX `unique_idnumber_email` (`IDnumber`, `email`)";
 mysqli_query($conn, $sql);

@@ -32,6 +32,7 @@ include("library/call_function4.php");
                 ?>
                   <td><?php echo $getData['IDnumber']; ?></td>
                   <td><?php echo $getData['firstname']; ?></td>
+                  <td><?php echo $getData['middlename']; ?></td>
                   <td><?php echo $getData['lastname']; ?></td>
                   <td><?php echo $getData['email']; ?></td>
                   <td><?php echo $getData['department']; ?></td>

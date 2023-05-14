@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
     //Create Variable to catch the data from the form
     $idnumber = $_POST['IDnumber'];
     $fname = $_POST['firstname'];
+    $mname = $_POST['middlename'];
     $lname = $_POST['lastname'];
     $email = $_POST['email'];
     $depart = $_POST['department'];
@@ -31,7 +32,7 @@ if (isset($_POST['submit'])) {
         echo "<script>window.location.href='.?folder=pages/&page=add-incharge&error=1';</script>";
     } else {
         //Insert the data to table
-        $sql = "INSERT INTO tbl_incharge (IDnumber, firstname, lastname,  email, department) VALUES ('$idnumber', '$fname', '$lname', '$email', '$depart')";
+        $sql = "INSERT INTO tbl_incharge (IDnumber, firstname, middlename, lastname,  email, department) VALUES ('$idnumber', '$fname', '$mname', '$lname', '$email', '$depart')";
 
         //Check if insertion
         if (mysqli_query($conn, $sql)) {

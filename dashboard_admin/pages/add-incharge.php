@@ -45,21 +45,25 @@ include_once('action/display-profile.php');
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="IDnumber">ID number</label>
-                            <input type="text" class="form-control" name="IDnumber" required>
+                            <input type="text" class="form-control" name="IDnumber" placeholder="Enter your ID" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="firstname">First name</label>
-                            <input type="text" class="form-control" name="firstname" required>
+                            <input type="text" class="form-control" name="firstname" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="middlename">Middle name</label>
+                            <input type="text" class="form-control" name="middlename" placeholder="Enter your middle name" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lastname">Last name</label>
-                            <input type="text" class="form-control" name="lastname" required>
+                            <input type="text" class="form-control" name="lastname" placeholder="Enter your last name" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" required>
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
                         </div>
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-6">
                         <label for="inputState">Department</label>
                         <select id="inputState" class="form-control" name="department" required>
                             <option selected>Choose department</option>

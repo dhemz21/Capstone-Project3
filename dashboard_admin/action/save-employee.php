@@ -1,7 +1,7 @@
 <?php
 include_once '../database/db_conn.php';
 
-$query_lastID = 'SELECT * FROM tbl_student ORDER BY UserID DESC LIMIT 1';
+$query_lastID = 'SELECT * FROM tbl_employee ORDER BY UserID DESC LIMIT 1';
 $result_lastID = mysqli_query($conn, $query_lastID) or die(mysqli_error($conn));
 $totalID = 0;
 
@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
     //Create Variable to catch the data from the form
     $idnumber = $_POST['IDnumber'];
     $firstname = $_POST['firstname'];
+    $mname = $_POST['middlename'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $depart = $_POST['department'];
@@ -31,7 +32,7 @@ if (isset($_POST['submit'])) {
         echo "<script>window.location.href='.?folder=pages/&page=add-employee&error=1';</script>";
     } else {
         //Insert the data to table
-        $sql = "INSERT INTO tbl_employee (IDnumber, firstname, lastname, email, department, type) VALUES ('$idnumber', '$firstname','$lastname', '$email', '$depart', 'EMPLOYEE')";
+        $sql = "INSERT INTO tbl_employee (IDnumber, firstname, middlename, lastname, email, department, type) VALUES ('$idnumber', '$firstname', '$mname', '$lastname', '$email', '$depart', 'EMPLOYEE')";
 
         //Check if insertion
         if (mysqli_query($conn, $sql)) {

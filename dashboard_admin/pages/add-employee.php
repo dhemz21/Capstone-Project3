@@ -45,22 +45,26 @@ include_once('action/display-profile.php');
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="user">ID number</label>
-                            <input type="text" class="form-control" name="IDnumber" required>
+                            <input type="text" class="form-control" name="IDnumber" placeholder="Enter employee your ID" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Firstname">Firstname</label>
-                            <input type="text" class="form-control" name="firstname" required>
+                            <label for="Firstname">First name</label>
+                            <input type="text" class="form-control" name="firstname" placeholder="Enter your first name" required>
+                        </div>
+                          <div class="form-group col-md-6">
+                            <label for="Middlename">Middle name</label>
+                            <input type="text" class="form-control" name="middlename" placeholder="Enter your middle name" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Lastname">Lastname</label>
-                            <input type="text" class="form-control" name="lastname" required>
+                            <label for="Lastname">Last name</label>
+                            <input type="text" class="form-control" name="lastname" placeholder="Enter your last name" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" required>
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
                         </div>
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-6">
                         <label for="inputState">Department</label>
                         <select id="inputState" class="form-control" name="department" required>
                             <option selected>Choose department</option>
@@ -90,7 +94,7 @@ include_once('action/display-profile.php');
             Swal.fire({
                 icon: 'success',
                 title: 'Employee added',
-                text: ' You successully added a employee!'
+                text: ' You successully added an employee!'
             })
         </script>
     <?php

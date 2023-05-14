@@ -32,6 +32,7 @@ include("library/call_function3.php");
                 ?>
                   <td><?php echo $getData['IDnumber']; ?></td>
                   <td><?php echo $getData['firstname']; ?></td>
+                  <td><?php echo $getData['middlename']; ?></td>
                   <td><?php echo $getData['lastname']; ?></td>
                   <td><?php echo $getData['email']; ?></td>
                   <td><?php echo $getData['department']; ?></td>
@@ -68,7 +69,7 @@ include("library/call_function3.php");
             Swal.fire({
                 icon: 'success',
                 title: 'Success',
-                text: 'You successully deleted student!'
+                text: 'You successully deleted a student!'
             })
         </script>
     <?php

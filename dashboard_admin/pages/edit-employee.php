@@ -50,6 +50,10 @@ include_once('action/display-profile.php');
                             <input type="text" class="form-control" name="firstname" value="<?php echo $getData['firstname']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="Middlename">Middle name</label>
+                            <input type="text" class="form-control" name="middlename" value="<?php echo $getData['middlename']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
                             <label for="Lastname">Lastname</label>
                             <input type="text" class="form-control" name="lastname" value="<?php echo $getData['lastname']; ?>"required>
                         </div>
@@ -58,7 +62,7 @@ include_once('action/display-profile.php');
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" value="<?php echo $getData['email']; ?>" required>
                         </div>
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-6">
                         <label for="inputState">Department</label>
                         <select id="inputState" class="form-control" name="department" required>
                             <option selected><?php echo $getData['department']; ?></option>
