@@ -48,11 +48,15 @@ include_once('action/display-profile.php');
                             <input type="text" class="form-control" name="IDnumber" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Firstname">Firstname</label>
+                            <label for="Firstname">First name</label>
                             <input type="text" class="form-control" name="firstname" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Lastname">Lastname</label>
+                            <label for="Middlename">Middle name</label>
+                            <input type="text" class="form-control" name="middlename" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="Lastname">Last name</label>
                             <input type="text" class="form-control" name="lastname" required>
                         </div>
 
@@ -61,8 +65,18 @@ include_once('action/display-profile.php');
                             <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputState">Course</label>
-                        <select id="inputState" class="form-control" name="course" required>
+                        <label for="year">Year</label>
+                        <select id="year" class="form-control" name="year" required>
+                            <option selected>Choose Year</option>
+                            <option>1st</option>
+                            <option>2nd</option>
+                            <option>3rd</option>
+                            <option>4th</option>
+                        </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="course">Course</label>
+                        <select id="course" class="form-control" name="course" required>
                             <option selected>Choose course</option>
                             <option>BSIT</option>
                             <option>BSME</option>
@@ -73,14 +87,14 @@ include_once('action/display-profile.php');
                             <option>BSED MATH</option>
                             <option>BSED SCIENCE</option>
                             <option>BTVTED FSM</option>
-                            <option>Bs Ind. Tech.CA</option>
-                            <option>Bs Ind. Tech.ELX</option>
+                            <option>BS IND. TECH.CA</option>
+                            <option>BS IND. TECH.ELX</option>
                             <option>BSHM</option>
                         </select>
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputState">Department</label>
-                        <select id="inputState" class="form-control" name="department" required>
+                        <label for="department">Department</label>
+                        <select id="department" class="form-control" name="department" required>
                             <option selected>Choose department</option>
                             <option>COMPUTER STUDIES</option>
                             <option>ENGINEERING</option>

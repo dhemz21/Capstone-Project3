@@ -14,9 +14,9 @@ if ($_FILES['file']['error'] == UPLOAD_ERR_OK) {
   $file = $_FILES['file']['tmp_name'];
   if (($handle = fopen($file, 'r')) !== false) {
     $header = fgetcsv($handle);
-    $stmt = mysqli_prepare($conn, 'INSERT INTO tbl_student (IDnumber, firstname, lastname, email, course, department, type) VALUES (?, ?, ?, ?, ?, ?, ?)');
+    $stmt = mysqli_prepare($conn, 'INSERT INTO tbl_student (IDnumber, firstname, middlename, lastname, email, year, course, department, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
     while (($data = fgetcsv($handle)) !== false) {
-      mysqli_stmt_bind_param($stmt, 'sssssss', $data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6]);
+      mysqli_stmt_bind_param($stmt, 'sssssssss', $data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]);
       mysqli_stmt_execute($stmt);
       if (mysqli_errno($conn) == 1062) { // duplicate key error
         if (!isset($_COOKIE['confirm_duplicate'])) { // check if cookie is set

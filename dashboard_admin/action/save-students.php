@@ -17,8 +17,10 @@ if (isset($_POST['submit'])) {
     //Create Variable to catch the data from the form
     $idnumber = $_POST['IDnumber'];
     $firstname = $_POST['firstname'];
+    $middlename = $_POST['middlename'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
+    $year = $_POST['year'];
     $course = $_POST['course'];
     $depart = $_POST['department'];
 
@@ -32,7 +34,7 @@ if (isset($_POST['submit'])) {
         echo "<script>window.location.href='.?folder=pages/&page=add-students&error=1';</script>";
     } else {
         //Insert the data to table
-        $sql = "INSERT INTO tbl_student (IDnumber, firstname, lastname, email, course, department, type) VALUES ('$idnumber', '$firstname','$lastname', '$email', '$course', '$depart', 'STUDENT')";
+        $sql = "INSERT INTO tbl_student (IDnumber, firstname, middlename, lastname, email, year, course, department, type) VALUES ('$idnumber', '$firstname', '$middlename', '$lastname', '$email', '$year', '$course', '$depart', 'STUDENT')";
 
         //Check if insertion
         if (mysqli_query($conn, $sql)) {

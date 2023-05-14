@@ -46,17 +46,31 @@ include_once('action/display-profile.php');
                             <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Firstname">Firstname</label>
+                            <label for="Firstname">First name</label>
                             <input type="text" class="form-control" name="firstname" value="<?php echo $getData['firstname']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Lastname">Lastname</label>
+                            <label for="Middle name">Middle name</label>
+                            <input type="text" class="form-control" name="middlename" value="<?php echo $getData['middlename']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="Lastname">Last name</label>
                             <input type="text" class="form-control" name="lastname" value="<?php echo $getData['lastname']; ?>"required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" value="<?php echo $getData['email']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="year">Department</label>
+                        <select id="year" class="form-control" name="year" required>
+                            <option selected><?php echo $getData['year']; ?></option>
+                            <option>1st</option>
+                            <option>2nd</option>
+                            <option>3rd</option>
+                            <option>4th</option>
+                        </select>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="inputState">Course</label>

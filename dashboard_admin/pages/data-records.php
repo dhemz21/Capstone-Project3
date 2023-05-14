@@ -32,8 +32,10 @@ include("library/call_function2.php");
                 ?>
                   <td><?php echo $getData['IDnumber']; ?></td>
                   <td><?php echo $getData['firstname']; ?></td>
+                  <td><?php echo $getData['middlename']; ?></td>
                   <td><?php echo $getData['lastname']; ?></td>
                   <td><?php echo $getData['email']; ?></td>
+                  <td><?php echo $getData['year']; ?></td>
                   <td><?php echo $getData['course']; ?></td>
                   <td><?php echo $getData['department']; ?></td>
                   <td class="text-left py-0 align-middle">
