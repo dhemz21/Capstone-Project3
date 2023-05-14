@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
 
 	// CHECK VARIABLE TO CATCH THE DATA FROM THE FORM
 	$firstname = $_POST['firstname'];
+	$mname = $_POST['middlename'];
 	$lastname = $_POST['lastname'];
 	$idnumber = $_POST['IDnumber'];
     $email = $_POST['email'];
@@ -42,8 +43,8 @@ if (isset($_POST['submit'])) {
     
 
 	// INSERT THE DATA TO TABLE TBL_ADMIN
-	$sql = "INSERT INTO tbl_admin (firstname, lastname, IDnumber, email)
-	VALUES ('$firstname','$lastname', '$idnumber', '$email')";
+	$sql = "INSERT INTO tbl_admin (firstname, middlename, lastname, IDnumber, email)
+	VALUES ('$firstname', '$mname', '$lastname', '$idnumber', '$email')";
     }
 		   
 	//CHECK IF THE INSERTION IS SUCCESSFUL

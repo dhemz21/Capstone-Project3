@@ -22,9 +22,10 @@ $totalID = $totalID + 1;
 if (isset($_POST['submit'])) {
 	// CREATE VARIABLE TO CATCH THE DATA FROM THE FORM
 	$idnumber = $_POST['IDnumber'];
-	$email = $_POST['email'];
 	$fname = $_POST['firstname'];
+	$mname = $_POST['middlename'];
 	$lname = $_POST['lastname'];
+	$email = $_POST['email'];
 		// HASH THE PASSWORD USING ARGON2
 		$password = $_POST['password'];
 		$hash = password_hash($password, PASSWORD_ARGON2I);
@@ -46,6 +47,7 @@ if (isset($_POST['submit'])) {
 	// GETTING THE SPECIFIC ROW FROM THE TBL_ADMIN WHICH IS THE USER_ID AND INSERT TO TABLE REGISTERED_ADMIN
 	$registered_id = $row['UserID'];
 	$reg_fname = $row['firstname'];
+	$mname = $row['middlename'];
 	$reg_lname = $row['lastname'];
 	$mail = $row['email'];
 
@@ -64,8 +66,8 @@ if (isset($_POST['submit'])) {
 	} else {
 
 		//INSERTING THE DATA TO THE TABLE REGISTERED_USERS 
-		$sql = "INSERT INTO registered_admin (Registered_ID, IDnumber, email, Firstname, Lastname, password, login_type)
-		VALUES ('$registered_id ', '$idnumber', '$mail','$reg_fname','$reg_lname','$hash', 'ADMIN')";
+		$sql = "INSERT INTO registered_admin (Registered_ID, IDnumber, email, Firstname, Middlename, Lastname, password, login_type)
+		VALUES ('$registered_id ', '$idnumber', '$mail','$reg_fname', '$mname', '$reg_lname','$hash', 'ADMIN')";
 	
 	}
 

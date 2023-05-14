@@ -45,24 +45,29 @@ session_start();
              
                 <div class="col-md-6">
                   <div class="input-group mb-2">
-                    <input type="text" class="input form-control rounded-0" name="firstname" placeholder="Firstname" aria-label="firstname" aria-describedby="basic-addon1" required />
+                    <input type="text" class="input form-control rounded-0" name="firstname" placeholder="First name" required />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="input-group mb-2">
-                    <input type="text" class="input form-control rounded-0" name="lastname" placeholder="Lastname" aria-label="lastname" aria-describedby="basic-addon1" required />
+                    <input type="text" class="input form-control rounded-0" name="middlename" placeholder="Middle name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group mb-2">
+                    <input type="text" class="input form-control rounded-0" name="lastname" placeholder="Last name" required />
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="input-group mb-2">
-                    <input type="text" class="input form-control rounded-0" name="IDnumber" placeholder="IDnumber" aria-label="IDnumber" aria-describedby="basic-addon1" required />
+                    <input type="text" class="input form-control rounded-0" name="IDnumber" placeholder="ID number" required />
                   </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="input-group mb-2">
-                    <input type="email" class="input form-control rounded-0" name="email" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" required />
+                    <input type="email" class="input form-control rounded-0" name="email" placeholder="Email" required />
                   </div>
                 </div>
                 <div class="col-12">
