@@ -4,7 +4,7 @@ session_start();
 // DATABASE CONNECTION
 require_once('database/db_conn.php');
 
-// GET THE POSTED PASSWORD AND ID NUMBER
+// GET THE POSTED PASSWORD AND IDNUMBER
 $password = $_POST['password'];
 $idnumber = $_POST['IDnumber'];
 

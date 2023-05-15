@@ -9,7 +9,6 @@ $image_name = $_FILES['profile_picture']['name'];
 $image_temp = $_FILES['profile_picture']['tmp_name'];
 $image_size = $_FILES['profile_picture']['size'];
 
-
 // CHECK IF NO IMAGE WAS SELECTED
 if (!$image_name) {
 
@@ -24,11 +23,9 @@ if (!$image_name) {
         exit();
     }
 
-
     // ALLOWED FILE TYPES
     $image_ext = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
     $allowed_extensions = array("jpg", "jpeg", "png");
-
 
     // CHECK IF THE FILE TYPE IS NOT IN THW ALLOWED TYPES
     if (!in_array($image_ext, $allowed_extensions)) {
@@ -36,7 +33,6 @@ if (!$image_name) {
         echo "<script>window.location.href='.?folder=pages/&page=admin-add-photo&error=1';</script>";
         exit();
     }
-
 
     // GENERATE A UNIQUE NAME FOR THE IMAGE
     $image = md5(microtime()) . '.' . $image_ext;
@@ -46,7 +42,6 @@ if (!$image_name) {
     if (!file_exists('profile')) {
         mkdir('profile', 0777, true);
     }
-
 
     // MOVE TE IMAGE TO THE PROFILE FOLDER
     move_uploaded_file($image_temp, "profile/".$image);

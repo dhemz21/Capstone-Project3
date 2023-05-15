@@ -26,7 +26,6 @@ if (isset($_POST['submit'])) {
 	$idnumber = $_POST['IDnumber'];
     $email = $_POST['email'];
 
-
     // CHECK THE USER THAT IS ALREADY EXISTED ON THE DATABASE FROM TABLE TBL_ADMIN
 	$checkUser = "SELECT * FROM tbl_admin WHERE firstname = '$firstname' && email ='$email'";
 	$result = mysqli_query($conn, $checkUser);
@@ -41,7 +40,6 @@ if (isset($_POST['submit'])) {
 
 	} else {
     
-
 	// INSERT THE DATA TO TABLE TBL_ADMIN
 	$sql = "INSERT INTO tbl_admin (firstname, middlename, lastname, IDnumber, email)
 	VALUES ('$firstname', '$mname', '$lastname', '$idnumber', '$email')";

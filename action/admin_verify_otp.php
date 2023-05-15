@@ -5,7 +5,6 @@ session_start();
 // DATABASE CONNECTION
 require_once('database/db_conn.php');
 
-
 if (isset($_POST['submit'])) {
 
     $idnumber = $_POST['IDnumber'];

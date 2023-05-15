@@ -40,7 +40,6 @@ if (isset($_POST['submit'])) {
             $_SESSION['validate'] = "success";
             echo "<script>window.location.href='.?folder=pages/&page=add-incharge&success=1';</script>";
 
-
         } else {
             echo "Error: " . $sql . "" . mysqli_error($conn);
         }

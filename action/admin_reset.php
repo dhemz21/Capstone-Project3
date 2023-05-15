@@ -18,15 +18,13 @@ if (isset($_POST['submit'])) {
     // GETTING THE SPECIFIC ROW FROM THE REGISTERED_ADMIN WHICH IS THE USER_ID AND INSERT TO TABLE RESET_PASSWORD_TOKEN
      $email_ad = $row['email'];
 
-    // SOTRE THE DATA IN THE SESSION
+    // STORE THE DATA IN THE SESSION
     $_SESSION['IDnumber'] = $idnumber;
        
     } else {
         echo "error";
     }
     
-   
-
     // IF STATEMENT 
     if ($count == 1) {
 

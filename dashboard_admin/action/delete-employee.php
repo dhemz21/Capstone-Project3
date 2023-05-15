@@ -10,7 +10,6 @@ $query = "SELECT * FROM tbl_employee WHERE UserID = '$userID'";
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $row = mysqli_fetch_assoc($result);
 
-
 // DELETING THE DATA FROM TABLE TBL_EMPLOYEE
 $query = "DELETE FROM tbl_employee WHERE UserID = '$userID'";
 if(mysqli_query($conn,$query)){

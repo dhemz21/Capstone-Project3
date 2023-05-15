@@ -40,9 +40,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['validate'] = "successful";
         header("location: .?page=admin_reset_pass");
         exit(); // Stop further PHP execution
-
-
-       
+    
     } else {
 
         $_SESSION['validate'] = "unsuccessful";

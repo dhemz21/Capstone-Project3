@@ -18,7 +18,6 @@ while ($row = mysqli_fetch_assoc($result_lastID)) {
 // LAST ID PLUS 1 FOR THE INSERTED ID
 $totalID = $totalID + 1;
 
-
 if (isset($_POST['submit'])) {
 	// CREATE VARIABLE TO CATCH THE DATA FROM THE FORM
 	$idnumber = $_POST['IDnumber'];
@@ -26,23 +25,23 @@ if (isset($_POST['submit'])) {
 	$mname = $_POST['middlename'];
 	$lname = $_POST['lastname'];
 	$email = $_POST['email'];
-		// HASH THE PASSWORD USING ARGON2
-		$password = $_POST['password'];
-		$hash = password_hash($password, PASSWORD_ARGON2I);
+
+	// HASH THE PASSWORD USING ARGON2
+	$password = $_POST['password'];
+	$hash = password_hash($password, PASSWORD_ARGON2I);
 	
 
-	// RETRIEVE THE USERNAME FROM THIS TABLE FOR THE GIVEN SPECIFIC IDNUMBER
+	// RETRIEVE THE IDNUMBER FROM THIS TABLE FOR THE GIVEN SPECIFIC IDNUMBER
 	$query = "SELECT * FROM tbl_admin WHERE IDnumber = '$idnumber'";
 	$result = mysqli_query($conn, $query);
 	$row = mysqli_fetch_assoc($result);
 
-	//   CHECK IF THE GIVEN IDNUMBER EXISTS IN TBL_ADMIN
+	// CHECK IF THE GIVEN IDNUMBER EXISTS IN TBL_ADMIN
 	if (!$row) {
 		$_SESSION['validate'] = "unsuccessful";
         header("location: .?page=admin_signup");
 		exit;
 	}
-
 
 	// GETTING THE SPECIFIC ROW FROM THE TBL_ADMIN WHICH IS THE USER_ID AND INSERT TO TABLE REGISTERED_ADMIN
 	$registered_id = $row['UserID'];
@@ -65,13 +64,13 @@ if (isset($_POST['submit'])) {
 
 	} else {
 
-		//INSERTING THE DATA TO THE TABLE REGISTERED_USERS 
+		//INSERTING THE DATA TO THE TABLE REGISTERED_ADMIN
 		$sql = "INSERT INTO registered_admin (Registered_ID, IDnumber, email, Firstname, Middlename, Lastname, password, login_type)
 		VALUES ('$registered_id ', '$idnumber', '$mail','$reg_fname', '$mname', '$reg_lname','$hash', 'ADMIN')";
 	
 	}
 
-	//CHECKING IF INSERTION IS SUCCESSFUL FROM REGISTERED_USERS
+	//CHECKING IF INSERTION IS SUCCESSFUL FROM REGISTERED_ADMIN
 	if (mysqli_query($conn, $sql)) {
 
         $_SESSION['validate'] = "inserted";
