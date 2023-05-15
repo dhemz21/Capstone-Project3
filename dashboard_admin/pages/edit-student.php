@@ -43,24 +43,24 @@ include_once('action/display-profile.php');
                         <div class="form-group col-md-6">
                         <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
                             <label for="IDnumber">ID number</label>
-                            <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
+                            <input type="text" class="form-control" id="IDnumber" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Firstname">First name</label>
-                            <input type="text" class="form-control" name="firstname" value="<?php echo $getData['firstname']; ?>" required>
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname" value="<?php echo $getData['firstname']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Middle name">Middle name</label>
-                            <input type="text" class="form-control" name="middlename" value="<?php echo $getData['middlename']; ?>" required>
+                            <label for="middlename">Middle name</label>
+                            <input type="text" class="form-control" id="middlename" name="middlename" value="<?php echo $getData['middlename']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Lastname">Last name</label>
-                            <input type="text" class="form-control" name="lastname" value="<?php echo $getData['lastname']; ?>"required>
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname" value="<?php echo $getData['lastname']; ?>"required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" value="<?php echo $getData['email']; ?>" required>
+                            <input type="email" class="form-control" id="email" name="email" value="<?php echo $getData['email']; ?>" required>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="year">Department</label>
@@ -73,8 +73,8 @@ include_once('action/display-profile.php');
                         </select>
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputState">Course</label>
-                        <select id="inputState" class="form-control" name="course" required>
+                        <label for="course">Course</label>
+                        <select id="course" class="form-control" name="course" required>
                             <option selected><?php echo $getData['course']; ?></option>
                             <option>BSIT</option>
                             <option>BSME</option>

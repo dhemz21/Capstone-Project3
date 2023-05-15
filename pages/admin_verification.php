@@ -43,10 +43,10 @@ session_start();
                 </div>
               <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=admin_regEmail" novalidate>
                 <div class="col-12">
-                     <label for="text" class="form-label">IDnumber</label>
+                     <label for="email" class="form-label">IDnumber</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                      <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-id-card"></i></span>
+                      <span class="input-group-text rounded-0"><i class="fa fa-id-card"></i></span>
                     </div>
                     <input name="IDnumber" type="text"class="input form-control rounded-0" id="email" placeholder="Enter your ID number" aria-label="email" required />
                   </div>

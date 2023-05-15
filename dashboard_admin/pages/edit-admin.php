@@ -51,27 +51,27 @@ include_once('action/display-profile.php');
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="hidden" name="userid" value="<?php echo $getData['userid']; ?>">
-                                <label for="user">ID number</label>
-                                <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
+                                <label for="IDnumber">ID number</label>
+                                <input type="text" class="form-control" id="IDnumber" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="Firstname">Firstname</label>
-                                <input type="text" class="form-control" name="Firstname" value="<?php echo $getData['Firstname']; ?>" required>
+                                <input type="text" class="form-control" id="Firstname" name="Firstname" value="<?php echo $getData['Firstname']; ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="Lastname">Lastname</label>
-                                <input type="text" class="form-control" name="Lastname" value="<?php echo $getData['Lastname']; ?>" required>
+                                <input type="text" class="form-control" id="Lastname" name="Lastname" value="<?php echo $getData['Lastname']; ?>" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" name="email" value="<?php echo $getData['email']; ?>" required>
+                                <input type="email" class="form-control" id="email" name="email" value="<?php echo $getData['email']; ?>" required>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="password">Current Password</label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                        <span class="input-group-text rounded-0"><i class="fa fa-lock"></i></span>
                                     </div>
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter your current password" required>
                                     <div class="input-group-append">

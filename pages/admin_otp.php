@@ -44,10 +44,10 @@ session_start();
           <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=admin_verify_otp" novalidate>
           <input type="hidden" name="email" class="input form-control rounded-0">
             <div class="col-12">
-              <label for="text" class="form-label">One-Time Password</label>
+              <label for="otp" class="form-label">One-Time Password</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-user-lock"></i></span>
+                  <span class="input-group-text rounded-0"><i class="fa fa-user-lock"></i></span>
                 </div>
                 <input name="otp" type="text" class="input form-control" id="otp" placeholder="Enter your OTP" aria-label="otp" aria-describedby="basic-addon1" required />
               </div>

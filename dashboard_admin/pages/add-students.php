@@ -44,29 +44,29 @@ include_once('action/display-profile.php');
                 <form action=".?folder=action/&page=save-students" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="user">ID number</label>
-                            <input type="text" class="form-control" name="IDnumber" placeholder="Enter your student ID" required>
+                            <label for="IDnumber">ID number</label>
+                            <input type="text" class="form-control" id="IDnumber" name="IDnumber" placeholder="Enter your student ID" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Firstname">First name</label>
-                            <input type="text" class="form-control" name="firstname" placeholder="Enter your first name" required>
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Middlename">Middle name</label>
-                            <input type="text" class="form-control" name="middlename" placeholder="Enter your middle name" required>
+                            <label for="middlename">Middle name</label>
+                            <input type="text" class="form-control" id="middlename" name="middlename" placeholder="Enter your middle name" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Lastname">Last name</label>
-                            <input type="text" class="form-control" name="lastname" placeholder="Enter your last name" required>
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your last name" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="year">Year</label>
-                        <select id="year" class="form-control" name="year" required>
+                        <select id="year" class="form-control" id="year" name="year" required>
                             <option selected>Choose Year</option>
                             <option>1st</option>
                             <option>2nd</option>

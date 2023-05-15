@@ -31,26 +31,26 @@ include_once('action/display-profile.php');
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="hidden" name="userid" value="<?php echo $getData['userid']; ?>">
-                <label for="user">ID number</label>
-                <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
+                <label for="IDnumber">ID number</label>
+                <input type="text" class="form-control" id="IDnumber" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
               </div>
               <div class="form-group col-md-6">
-                <label for="user">Firstname</label>
-                <input type="text" class="form-control" name="Firstname" value="<?php echo $getData['Firstname']; ?>" readonly>
+                <label for="Firstname">Firstname</label>
+                <input type="text" class="form-control" id="Firstname" name="Firstname" value="<?php echo $getData['Firstname']; ?>" readonly>
               </div>
               <div class="form-group col-md-6">
-                <label for="user">Lastname</label>
-                <input type="text" class="form-control" name="Lastname" value="<?php echo $getData['Lastname']; ?>" readonly>
+                <label for="Lastname">Lastname</label>
+                <input type="text" class="form-control" id="Lastname" name="Lastname" value="<?php echo $getData['Lastname']; ?>" readonly>
               </div>
               <div class="form-group col-md-6">
-                <label for="user">Email</label>
-                <input type="email" class="form-control" name="email" value="<?php echo $getData['email']; ?>" readonly>
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" value="<?php echo $getData['email']; ?>" readonly>
               </div>
               <div class="form-group col-md-12">
                 <label for="password">Password</label>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                    <span class="input-group-text rounded-0"><i class="fa fa-lock"></i></span>
                   </div>
                   <input type="password" class="form-control" id="password" name="password" value="<?php echo $getData['password']; ?>" readonly>
                   <div class="input-group-append">

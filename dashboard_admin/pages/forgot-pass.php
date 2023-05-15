@@ -34,8 +34,8 @@
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <input type="hidden" name="userid" value="<?php echo $getData['userid']; ?>">
-                                <label for="user">ID number</label>
-                                <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
+                                <label for="IDnumber">ID number</label>
+                                <input type="text" class="form-control" id="IDnumber" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
                             </div>
                             <div class="col-md-6">
                                 <label for="password">New Password</label>
