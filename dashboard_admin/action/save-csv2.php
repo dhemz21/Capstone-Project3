@@ -17,7 +17,7 @@ if ($_FILES['file']['error'] == UPLOAD_ERR_OK) {
   $file = $_FILES['file']['tmp_name'];
   if (($handle = fopen($file, 'r')) !== false) {
     $header = fgetcsv($handle);
-    $stmt = mysqli_prepare($conn, 'INSERT INTO tbl_employee (IDnumber, middlename, firstname, lastname, email, department, type) VALUES (?, ?, ?, ?, ?, ?, ?)');
+    $stmt = mysqli_prepare($conn, 'INSERT INTO tbl_employee (IDnumber, firstname,  middlename,  lastname, email, department, type) VALUES (?, ?, ?, ?, ?, ?, ?)');
     while (($data = fgetcsv($handle)) !== false) {
       mysqli_stmt_bind_param($stmt, 'sssssss', $data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6]);
       mysqli_stmt_execute($stmt);
