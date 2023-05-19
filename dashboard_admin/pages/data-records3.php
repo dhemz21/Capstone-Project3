@@ -48,7 +48,7 @@ include("library/call_function4.php");
             </table>
           </div>
           <div class="col-12 mt-2 mb-2">
-            <p class="text-start"><a href=".?page=add-employee" class="text-decoration-none">Go Back</a> </p>
+            <p class="text-start"><a href=".?page=add-incharge" class="text-decoration-none">Go Back</a> </p>
           </div>
           <!-- /.card-body -->
         </div>
