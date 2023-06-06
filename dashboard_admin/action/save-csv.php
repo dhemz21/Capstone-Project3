@@ -6,7 +6,7 @@ if (isset($_COOKIE['confirm_duplicate'])) {
   unset($_COOKIE['confirm_duplicate']);
 }
 // add unique index to tbl_student table
-$sql = "ALTER TABLE tbl_student ADD UNIQUE INDEX `unique_idnumber_email` (`IDnumber`, `email`)";
+$sql = "ALTER TABLE tbl_student ADD UNIQUE INDEX `unique_IDnumber_email` (`IDnumber`, `email`)";
 mysqli_query($conn, $sql);
 
 // sets a time limit of 300 seconds (5 minutes)
