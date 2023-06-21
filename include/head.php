@@ -16,17 +16,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- FONTAWESOMEICON ONLINE -->
-    <link rel="stylesheet" href="dist/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css">
 
     <!-- BOOTSTRAP CSS 5.2.3 -->
-    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.2.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
 
     <!-- BOOTSTAP SCRIPT 5.2.3 -->
-    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- SWEETALERT -->
-    <script src="dist/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
 
 
 </head>
