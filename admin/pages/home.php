@@ -33,7 +33,7 @@
                           }
 
                         ?>
-                        <p><strong>Total Users</strong> </p>
+                        <p><strong>Total Incharge</strong> </p>
                     </div>
                     <div class="icon">
                     <i class="nav-icon fas fa-user-tie"></i> 
@@ -63,7 +63,7 @@
                           }
 
                         ?>
-                        <p><strong>Total Users</strong> </p>
+                        <p><strong>Total Students</strong> </p>
                     </div>
                     <div class="icon">
                     <i class="nav-icon fas fa-user-tie"></i> 
@@ -92,7 +92,7 @@
                             echo '<h3>' . $Totalusers . '</h3> ';
                         }
                         ?>                      
-                        <p><strong>Total Users</strong> </p>
+                        <p><strong>Total Empployees</strong> </p>
                     </div>
                     <div class="icon">
                     <i class="nav-icon fas fa-table"></i>
